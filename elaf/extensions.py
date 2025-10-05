@@ -15,3 +15,10 @@ class LeadExtension(ModelExtension):
     category = models.CharField(max_length=20, choices=CATEGORY_CHOICES, blank=True, null=True)
     area = models.CharField(max_length=100, blank=True, null=True)
     number_of_floors = models.IntegerField(blank=True, null=True,default=1)
+
+
+
+
+class PartnerExtension(ModelExtension):
+    _inherit = 'base.partner'
+    responsible_user = models.ForeignKey('base.user', on_delete=models.SET_NULL, null=True, blank=True, related_name='partners_responsible_user')
