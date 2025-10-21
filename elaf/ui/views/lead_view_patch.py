@@ -41,6 +41,21 @@ lead_form_crm_patch = {
                     "placeholder": "Number of Floors",
             }
         },
+        {
+            "operation": "after",
+            "target": "field[name=assigned_to]",
+            "content": {
+                    "name": "quotation_document",
+                    "string": "Quotation Document",
+                    "widget": "files", 
+                    "help": "Quotation Document",
+                    "placeholder": "Quotation Document",
+                    "required": False, 
+                    "readonly": False,
+                    "multiSelect": False,
+                    # 'accept':""
+            }
+        },
     ]
 }
 
